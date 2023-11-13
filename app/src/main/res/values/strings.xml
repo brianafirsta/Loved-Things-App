@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Loved Things App</string>
+    <string name="signup">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="nama">Nama</string>
+    <string name="nohp">No.Handphone</string>
+    <string name="pass">Password</string>
+    <string name="repass">Re-password</string>
+</resources>
