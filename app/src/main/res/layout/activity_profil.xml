@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ProfilActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="128dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.115"
+        app:srcCompat="@drawable/ellipse" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="65.5dp"
+        android:layout_height="65.5dp"
+        app:srcCompat="@drawable/profile_icon"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="193dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Username"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="314dp" />
+
+    <EditText
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:autofillHints="name"
+        android:background="@drawable/gayaedit_text1"
+        android:fontFamily="@font/poppins_bold"
+        android:hint="@brianafirst"
+        android:padding="15dp"
+        android:textSize="11sp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="331dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Email"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <EditText
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:autofillHints="name"
+        android:background="@drawable/gayaedit_text1"
+        android:fontFamily="@font/poppins_bold"
+        android:hint="briana@gmail.com"
+        android:padding="15dp"
+        android:textSize="11sp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="413dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="No. Handphone"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="477dp" />
+
+    <EditText
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:autofillHints="name"
+        android:background="@drawable/gayaedit_text1"
+        android:fontFamily="@font/poppins_bold"
+        android:hint="08xx xxxx xxxx"
+        android:padding="15dp"
+        android:textSize="11sp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Password"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="554dp" />
+
+    <EditText
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:autofillHints="name"
+        android:background="@drawable/gayaedit_text1"
+        android:fontFamily="@font/poppins_bold"
+        android:hint="******"
+        android:padding="15dp"
+        android:textSize="11sp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="571dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Alamat"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="632dp" />
+
+    <EditText
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:autofillHints="name"
+        android:background="@drawable/gayaedit_text1"
+        android:fontFamily="@font/poppins_bold"
+        android:hint=" "
+        android:padding="15dp"
+        android:textSize="11sp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="649dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/katibeh"
+        android:textColor="@color/biru"
+        android:text="sunting profil"
+        android:textSize="14dp"
+        tools:layout_editor_absoluteX="310dp"
+        tools:layout_editor_absoluteY="140dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
