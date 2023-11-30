@@ -6,4 +6,9 @@
     <string name="nohp">No.Handphone</string>
     <string name="pass">Password</string>
     <string name="repass">Re-password</string>
+    <string name="user_ana">brianafirst</string>
+    <string name="email_ana">briana@gmail.com</string>
+    <string name="nohp_ana">08xx xxxx xxxx</string>
+    <string name="bintang">******</string>
+    <string name="alamat">Alamat</string>
 </resources>

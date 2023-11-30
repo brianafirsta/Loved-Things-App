@@ -7,7 +7,7 @@
     tools:context=".Activity.ProfilActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logo"
         android:layout_width="128dp"
         android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,31 +19,36 @@
         app:srcCompat="@drawable/logo" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/bundar"
         android:layout_width="103dp"
         android:layout_height="103dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
         app:layout_constraintVertical_bias="0.115"
         app:srcCompat="@drawable/ellipse" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/profil"
         android:layout_width="65.5dp"
         android:layout_height="65.5dp"
-        app:srcCompat="@drawable/profile_icon"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="193dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/bundar"
+        app:layout_constraintEnd_toEndOf="@+id/bundar"
+        app:layout_constraintStart_toStartOf="@+id/bundar"
+        app:layout_constraintTop_toTopOf="@+id/bundar"
+        app:srcCompat="@drawable/profile_icon" />
 
     <TextView
+        android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
         android:text="Username"
         android:textSize="10dp"
-        tools:layout_editor_absoluteX="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="314dp" />
 
     <EditText
@@ -53,17 +58,19 @@
         android:autofillHints="name"
         android:background="@drawable/gayaedit_text1"
         android:fontFamily="@font/poppins_bold"
-        android:hint="@brianafirst"
+        android:hint="@string/user_ana"
         android:padding="15dp"
         android:textSize="11sp"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="331dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <TextView
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
-        android:text="Email"
+        android:text="@string/email"
         android:textSize="10dp"
         tools:layout_editor_absoluteX="55dp"
         tools:layout_editor_absoluteY="396dp" />
@@ -75,17 +82,19 @@
         android:autofillHints="name"
         android:background="@drawable/gayaedit_text1"
         android:fontFamily="@font/poppins_bold"
-        android:hint="briana@gmail.com"
+        android:hint="@string/email_ana"
         android:padding="15dp"
         android:textSize="11sp"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="413dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <TextView
+        android:id="@+id/nohp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
-        android:text="No. Handphone"
+        android:text="@string/nohp"
         android:textSize="10dp"
         tools:layout_editor_absoluteX="55dp"
         tools:layout_editor_absoluteY="477dp" />
@@ -97,19 +106,23 @@
         android:autofillHints="name"
         android:background="@drawable/gayaedit_text1"
         android:fontFamily="@font/poppins_bold"
-        android:hint="08xx xxxx xxxx"
+        android:hint="@string/nohp_ana"
         android:padding="15dp"
         android:textSize="11sp"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="494dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nohp" />
 
     <TextView
+        android:id="@+id/pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
-        android:text="Password"
+        android:text="@string/pass"
         android:textSize="10dp"
-        tools:layout_editor_absoluteX="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="554dp" />
 
     <EditText
@@ -119,17 +132,19 @@
         android:autofillHints="name"
         android:background="@drawable/gayaedit_text1"
         android:fontFamily="@font/poppins_bold"
-        android:hint="******"
+        android:hint="@string/bintang"
         android:padding="15dp"
         android:textSize="11sp"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="571dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass" />
 
     <TextView
+        android:id="@+id/alamat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
-        android:text="Alamat"
+        android:text="@string/alamat"
         android:textSize="10dp"
         tools:layout_editor_absoluteX="55dp"
         tools:layout_editor_absoluteY="632dp" />
@@ -144,16 +159,20 @@
         android:hint=" "
         android:padding="15dp"
         android:textSize="11sp"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="649dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alamat" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/katibeh"
-        android:textColor="@color/biru"
         android:text="sunting profil"
+        android:textColor="@color/biru"
         android:textSize="14dp"
-        tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="140dp" />
+        app:layout_constraintBottom_toTopOf="@+id/bundar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
