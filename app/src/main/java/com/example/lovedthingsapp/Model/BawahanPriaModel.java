@@ -1,19 +1,23 @@
 package com.example.lovedthingsapp.Model;
 
-public class BawahanPriaModel {
+import java.io.Serializable;
+
+public class BawahanPriaModel implements Serializable {
     String img_url;
     String nama;
     String ukuran;
     String harga;
+    String desc;
 
     public BawahanPriaModel() {
     }
 
-    public BawahanPriaModel(String img_url, String nama, String ukuran, String harga) {
+    public BawahanPriaModel(String img_url, String nama, String ukuran, String harga, String desc) {
         this.img_url = img_url;
         this.nama = nama;
         this.ukuran = ukuran;
         this.harga = harga;
+        this.desc = desc;
     }
 
     public String getImg_url() {
@@ -46,5 +50,13 @@ public class BawahanPriaModel {
 
     public void setHarga(String harga) {
         this.harga = harga;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 }

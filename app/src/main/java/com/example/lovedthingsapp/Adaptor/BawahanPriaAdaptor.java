@@ -1,6 +1,7 @@
 package com.example.lovedthingsapp.Adaptor;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.lovedthingsapp.Activity.DetailedActivity;
 import com.example.lovedthingsapp.Model.BawahanPriaModel;
 import com.example.lovedthingsapp.R;
 
@@ -39,6 +41,15 @@ public class BawahanPriaAdaptor extends RecyclerView.Adapter<BawahanPriaAdaptor.
         holder.prbawahanName.setText(list.get(position).getNama());
         holder.prbawahanSize.setText(list.get(position).getUkuran());
         holder.prbawahanPrice.setText(String.valueOf(list.get(position).getHarga()));
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailedActivity.class);
+                intent.putExtra("detailed",list.get(position));
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

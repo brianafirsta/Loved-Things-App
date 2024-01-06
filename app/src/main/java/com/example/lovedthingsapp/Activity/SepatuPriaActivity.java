@@ -40,7 +40,7 @@ public class SepatuPriaActivity extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
 
-        //Bawahan Wanita
+        //Sepatu Pria
         sepatuPriaRecyclerview.setLayoutManager(new GridLayoutManager(this, 2));
         sepatuPriaModelList = new ArrayList<>();
         sepatuPriaAdaptor = new SepatuPriaAdaptor(this, sepatuPriaModelList);

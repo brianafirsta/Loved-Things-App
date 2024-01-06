@@ -8,7 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.lovedthingsapp.Model.BawahanPriaModel;
 import com.example.lovedthingsapp.Model.BawahanWanitaModel;
+import com.example.lovedthingsapp.Model.SepatuPriaModel;
 import com.example.lovedthingsapp.R;
 import com.google.firebase.Firebase;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -21,6 +23,12 @@ public class DetailedActivity extends AppCompatActivity {
 
     //Bawahan Wanita
     BawahanWanitaModel bawahanWanitaModel = null;
+
+    //Bawahan Pria
+    BawahanPriaModel bawahanPriaModel = null;
+
+    //Sepatu Pria
+    SepatuPriaModel sepatuPriaModel = null;
     private FirebaseFirestore firestore;
 
     @Override
@@ -32,8 +40,12 @@ public class DetailedActivity extends AppCompatActivity {
 
         final Object obj = getIntent().getSerializableExtra("detailed");
 
-        if (obj instanceof BawahanWanitaModel){
+        if (obj instanceof BawahanWanitaModel) {
             bawahanWanitaModel = (BawahanWanitaModel) obj;
+        } else if (obj instanceof BawahanPriaModel) {
+            bawahanPriaModel = (BawahanPriaModel) obj;
+        } else if (obj instanceof SepatuPriaModel) {
+            sepatuPriaModel = (SepatuPriaModel) obj;
         }
 
         detailedImg = findViewById(R.id.detailed_img);
@@ -52,6 +64,22 @@ public class DetailedActivity extends AppCompatActivity {
             ukuran.setText(bawahanWanitaModel.getUkuran());
             harga.setText(String.valueOf(bawahanWanitaModel.getHarga()));
             desc.setText(bawahanWanitaModel.getDesc());
+        }
+        //Bawahan Pria
+        else if (bawahanPriaModel != null){
+            Glide.with(getApplicationContext()).load(bawahanPriaModel.getImg_url()).into(detailedImg);
+            nama.setText(bawahanPriaModel.getNama());
+            ukuran.setText(bawahanPriaModel.getUkuran());
+            harga.setText(String.valueOf(bawahanPriaModel.getHarga()));
+            desc.setText(bawahanPriaModel.getDesc());
+        }
+        //Sepatu Pria
+        else if (sepatuPriaModel != null){
+            Glide.with(getApplicationContext()).load(sepatuPriaModel.getImg_url()).into(detailedImg);
+            nama.setText(sepatuPriaModel.getNama());
+            ukuran.setText(sepatuPriaModel.getUkuran());
+            harga.setText(String.valueOf(sepatuPriaModel.getHarga()));
+            desc.setText(sepatuPriaModel.getDesc());
         }
     }
 }

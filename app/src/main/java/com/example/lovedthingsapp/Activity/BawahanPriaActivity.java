@@ -40,7 +40,7 @@ public class BawahanPriaActivity extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
 
-        //Bawahan Wanita
+        //Bawahan Pria
         bawahanPriaRecyclerview.setLayoutManager(new GridLayoutManager(this, 2));
         bawahanPriaModelList = new ArrayList<>();
         bawahanPriaAdaptor = new BawahanPriaAdaptor(this, bawahanPriaModelList);
