@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coklat_muda"
+    tools:context=".Activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="128dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/hanger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/hanger" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="28dp"
+        android:layout_marginBottom="-20dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log In"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="20dp"
+                android:layout_gravity="center"/>
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="282dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/gayaedit_text"
+                android:fontFamily="@font/poppins_bold"
+                android:hint="Email"
+                android:padding="15dp"
+                android:textSize="11dp" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="282dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/gayaedit_text"
+                android:drawableEnd="@drawable/password_icon"
+                android:fontFamily="@font/poppins_bold"
+                android:hint="Password"
+                android:padding="15dp"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="117dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Lupa Password?"
+                android:textSize="10dp" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/coklat_tua"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Log in"
+                android:onClick="signin"
+                android:textColor="@color/black"
+                android:layout_marginLeft="100dp"
+                />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

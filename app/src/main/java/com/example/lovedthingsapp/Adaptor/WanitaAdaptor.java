@@ -1,5 +1,7 @@
 package com.example.lovedthingsapp.Adaptor;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,72 +9,86 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.helper.widget.Layer;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.lovedthingsapp.Domain.WanitaDomain;
+import com.example.lovedthingsapp.Activity.AtasanWanitaActivity;
+import com.example.lovedthingsapp.Activity.BawahanWanitaActivity;
+import com.example.lovedthingsapp.Activity.SepatuWanitaActivity;
+import com.example.lovedthingsapp.Model.WanitaModel;
 import com.example.lovedthingsapp.R;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class WanitaAdaptor extends RecyclerView.Adapter<WanitaAdaptor.ViewHolder> {
-    ArrayList<WanitaDomain>wanitaDomains;
 
-    public WanitaAdaptor(ArrayList<WanitaDomain> wanitaDomains) {
-        this.wanitaDomains = wanitaDomains;
+    private Context context;
+    private List<WanitaModel> list;
+
+    public WanitaAdaptor(Context context, List<WanitaModel> list) {
+        this.context = context;
+        this.list = list;
     }
 
+    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate= LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_wanita,parent,false);
-        return new ViewHolder(inflate);
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_wanita,parent,false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull WanitaAdaptor.ViewHolder holder, int position) {
-        holder.wanitaName.setText(wanitaDomains.get(position).getTitle());
-        String picUrl = "";
-        switch (position){
-            case 0:{
-                picUrl="wa";
-                holder.homeLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(),R.drawable.background));
-                break;
-            }
-            case 1:{
-                picUrl="wb";
-                holder.homeLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(),R.drawable.background));
-                break;
-            }
-            case 2:{
-                picUrl="ws";
-                holder.homeLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(),R.drawable.background));
-                break;
-            }
-        }
-        int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(picUrl, "drawable",holder.itemView.getContext().getPackageName());
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        Glide.with(holder.itemView.getContext())
-                .load(drawableResourceId)
-                .into(holder.wanitaPic);
+        Glide.with(context).load(list.get(position).getImg_url()).into(holder.waImg);
+        holder.waName.setText(list.get(position).getNama());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(context, BawahanWanitaActivity.class);
+//                intent.putExtra("bawahan wanita",list.get(position));
+//                context.startActivity(intent);
+                Intent intent;
+
+                // Menyesuaikan Intent dan data tambahan berdasarkan jenis item
+                switch (list.get(position).getJenisItem()) {
+                    case "Bawahan Wanita":
+                        intent = new Intent(context, BawahanWanitaActivity.class);
+                        break;
+                    case "Atasan Wanita":
+                        intent = new Intent(context, AtasanWanitaActivity.class);
+                        break;
+                    case "Sepatu Wanita":
+                        intent = new Intent(context, SepatuWanitaActivity.class);
+                        break;
+                    default:
+                        // Tambahkan handling untuk jenis item lain jika diperlukan
+                        return;
+                }
+
+                // Menambahkan data tambahan ke Intent
+                intent.putExtra("jenisItem", list.get(position));
+
+                // Memulai activity baru
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return wanitaDomains.size();
+        return list.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView wanitaName;
-        ImageView wanitaPic;
-        ConstraintLayout homeLayout;
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        ImageView waImg;
+        TextView waName;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            wanitaName=itemView.findViewById(R.id.wanitaName);
-            wanitaPic=itemView.findViewById(R.id.wanitaPic);
-            homeLayout=itemView.findViewById(R.id.homeLayout);
+            waImg = itemView.findViewById(R.id.wanitaPic);
+            waName = itemView.findViewById(R.id.wanitaName);
         }
     }
 }
