@@ -15,6 +15,18 @@
         android:theme="@style/Theme.LovedThingsApp"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.AksesorisPriaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.TasWanitaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CartActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.DetailedActivity"
             android:exported="false" />
         <activity

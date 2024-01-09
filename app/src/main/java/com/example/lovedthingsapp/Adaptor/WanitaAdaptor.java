@@ -15,6 +15,7 @@ import com.bumptech.glide.Glide;
 import com.example.lovedthingsapp.Activity.AtasanWanitaActivity;
 import com.example.lovedthingsapp.Activity.BawahanWanitaActivity;
 import com.example.lovedthingsapp.Activity.SepatuWanitaActivity;
+import com.example.lovedthingsapp.Activity.TasWanitaActivity;
 import com.example.lovedthingsapp.Model.WanitaModel;
 import com.example.lovedthingsapp.R;
 
@@ -60,6 +61,9 @@ public class WanitaAdaptor extends RecyclerView.Adapter<WanitaAdaptor.ViewHolder
                         break;
                     case "Sepatu Wanita":
                         intent = new Intent(context, SepatuWanitaActivity.class);
+                        break;
+                    case "Tas Wanita":
+                        intent = new Intent(context, TasWanitaActivity.class);
                         break;
                     default:
                         // Tambahkan handling untuk jenis item lain jika diperlukan

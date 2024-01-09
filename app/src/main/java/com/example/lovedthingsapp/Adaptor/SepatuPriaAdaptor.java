@@ -41,7 +41,7 @@ public class SepatuPriaAdaptor extends RecyclerView.Adapter<SepatuPriaAdaptor.Vi
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.prsepatuImg);
         holder.prsepatuName.setText(list.get(position).getNama());
         holder.prsepatuSize.setText(list.get(position).getUkuran());
-        holder.prsepatuPrice.setText(String.valueOf(list.get(position).getHarga()));
+        holder.prsepatuPrice.setText("Rp " +list.get(position).getHarga());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

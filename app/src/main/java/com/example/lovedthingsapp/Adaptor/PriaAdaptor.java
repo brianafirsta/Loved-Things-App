@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.lovedthingsapp.Activity.AksesorisPriaActivity;
 import com.example.lovedthingsapp.Activity.AtasanPriaActivity;
 import com.example.lovedthingsapp.Activity.BawahanPriaActivity;
 import com.example.lovedthingsapp.Activity.SepatuPriaActivity;
@@ -60,6 +61,9 @@ public class PriaAdaptor extends RecyclerView.Adapter<PriaAdaptor.ViewHolder> {
                         break;
                     case "Sepatu Pria":
                         intent = new Intent(context, SepatuPriaActivity.class);
+                        break;
+                    case "Aksesoris Pria":
+                        intent = new Intent(context, AksesorisPriaActivity.class);
                         break;
                     default:
                         // Tambahkan handling untuk jenis item lain jika diperlukan

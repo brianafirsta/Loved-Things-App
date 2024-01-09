@@ -41,7 +41,7 @@ public class BawahanWanitaAdaptor extends RecyclerView.Adapter<BawahanWanitaAdap
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.wabawahanImg);
         holder.wabawahanName.setText(list.get(position).getNama());
         holder.wabawahanSize.setText(list.get(position).getUkuran());
-        holder.wabawahanPrice.setText(String.valueOf(list.get(position).getHarga()));
+        holder.wabawahanPrice.setText("Rp " +list.get(position).getHarga());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

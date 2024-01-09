@@ -40,7 +40,7 @@ public class BawahanPriaAdaptor extends RecyclerView.Adapter<BawahanPriaAdaptor.
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.prbawahanImg);
         holder.prbawahanName.setText(list.get(position).getNama());
         holder.prbawahanSize.setText(list.get(position).getUkuran());
-        holder.prbawahanPrice.setText(String.valueOf(list.get(position).getHarga()));
+        holder.prbawahanPrice.setText("Rp " +list.get(position).getHarga());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
