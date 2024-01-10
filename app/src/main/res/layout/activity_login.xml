@@ -75,6 +75,7 @@
                 android:textSize="11dp" />
 
             <TextView
+                android:id="@+id/forgot_password"
                 android:layout_width="117dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"

@@ -11,6 +11,11 @@
     <string name="nohp_ana">08xx xxxx xxxx</string>
     <string name="bintang">******</string>
     <string name="alamat">Alamat</string>
+
+    <string name="tambahkan_deskripsi_produk">Tambahkan Deskripsi Produk</string>
+    <string name="simpan">Simpan</string>
+    <string name="jual_produk">Jual Produk</string>
+    <string name="textview">TextView</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

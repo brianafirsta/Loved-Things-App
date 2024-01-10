@@ -56,20 +56,20 @@
                 app:layout_constraintTop_toBottomOf="@+id/cart_toolbar"
                 tools:listitem="@layout/item_cart"/>
 
-            <TextView
-                android:id="@+id/total_price"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:text="Total 150.000"
-                android:textSize="16dp"
-                android:fontFamily="@font/poppins_bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recyclerViewCart"
-                app:layout_constraintWidth_percent=".9"
-                android:layout_marginTop="10dp"
-                android:padding="18dp"/>
+<!--            <TextView-->
+<!--                android:id="@+id/total_price"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="right"-->
+<!--                android:text="Total 150.000"-->
+<!--                android:textSize="16dp"-->
+<!--                android:fontFamily="@font/poppins_bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/recyclerViewCart"-->
+<!--                app:layout_constraintWidth_percent=".9"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:padding="18dp"/>-->
 
             <Button
                 android:id="@+id/btn_checkout"
@@ -85,7 +85,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.931"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/total_price"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewCart"
                 app:layout_constraintWidth_percent=".9"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

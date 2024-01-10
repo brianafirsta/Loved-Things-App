@@ -8,9 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.lovedthingsapp.Adaptor.BawahanPriaAdaptor;
 import com.example.lovedthingsapp.Adaptor.SepatuPriaAdaptor;
-import com.example.lovedthingsapp.Model.BawahanPriaModel;
 import com.example.lovedthingsapp.Model.SepatuPriaModel;
 import com.example.lovedthingsapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;

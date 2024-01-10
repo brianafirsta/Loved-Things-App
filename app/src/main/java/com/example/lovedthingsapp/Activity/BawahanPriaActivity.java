@@ -9,9 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.example.lovedthingsapp.Adaptor.BawahanPriaAdaptor;
-import com.example.lovedthingsapp.Adaptor.BawahanWanitaAdaptor;
 import com.example.lovedthingsapp.Model.BawahanPriaModel;
-import com.example.lovedthingsapp.Model.BawahanWanitaModel;
 import com.example.lovedthingsapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;

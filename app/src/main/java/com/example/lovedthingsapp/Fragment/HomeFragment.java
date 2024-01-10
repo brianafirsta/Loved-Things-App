@@ -1,6 +1,7 @@
 package com.example.lovedthingsapp.Fragment;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,8 +13,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ProgressBar;
 
+import com.example.lovedthingsapp.Activity.SearchActivity;
+import com.example.lovedthingsapp.Activity.Sell;
 import com.example.lovedthingsapp.Adaptor.PriaAdaptor;
 import com.example.lovedthingsapp.Model.PriaModel;
 import com.example.lovedthingsapp.Adaptor.WanitaAdaptor;
@@ -24,6 +28,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.example.gmap.MapsActivity;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +49,7 @@ public class HomeFragment extends Fragment {
 
     //FireStore
     FirebaseFirestore db;
+    Button btnJual, btnBeli, showMap;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -56,6 +63,9 @@ public class HomeFragment extends Fragment {
         progressDialog = new ProgressDialog(getActivity());
         priaRecyclerview = root.findViewById(R.id.recyclerViewPr);
         wanitaRecyclerview = root.findViewById(R.id.recyclerViewWa);
+        btnJual = root.findViewById(R.id.btn_jual);
+        btnBeli = root.findViewById(R.id.btn_beli);
+        showMap = root.findViewById(R.id.showMap);
 
 
         db = FirebaseFirestore.getInstance();
@@ -111,6 +121,30 @@ public class HomeFragment extends Fragment {
                         }
                     }
                 });
+
+        btnJual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Sell.class);
+                startActivity(intent);
+            }
+        });
+
+        btnBeli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SearchActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        showMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), MapsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return root;
     }

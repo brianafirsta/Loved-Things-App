@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.lovedthingsapp.Activity.DetailedActivity;
-import com.example.lovedthingsapp.Model.BawahanPriaModel;
 import com.example.lovedthingsapp.Model.SepatuPriaModel;
 import com.example.lovedthingsapp.R;
 

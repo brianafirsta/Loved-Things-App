@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +16,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LovedThingsApp"
         tools:targetApi="31">
+        <activity
+            android:name=".Activity.Detailedd"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddProduct"
+            android:exported="false" />
+        <activity
+            android:name="com.example.gmap.MapsActivity"
+            android:label="Maps Activity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".Activity.EditProduct"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DetailProduct"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Sell"
+            android:exported="false" />
         <activity
             android:name=".Activity.AksesorisPriaActivity"
             android:exported="false" />
@@ -48,9 +69,6 @@
             android:name=".Activity.BawahanWanitaActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.MainActivity3"
-            android:exported="false" />
-        <activity
             android:name=".Activity.MainActivity2"
             android:exported="false" />
         <activity
@@ -58,9 +76,6 @@
             android:exported="false" />
         <activity
             android:name=".Activity.ResetpassActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.LoginActivity"
@@ -91,6 +106,9 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCW76f1b9IIkuL8JTkrM8sZnfZe8HhDczk" />
     </application>
 
 </manifest>
